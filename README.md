@@ -157,7 +157,7 @@ $$Loss=\tau L_{CIoU}+\mu L_{DF}+\omega L_{BC}$$
 
 其中：
 
-$$\begin{matrix}IoU&=\frac{P_b\cap Y_b}{P_b+Y_b-P_b\cap Y_b}\\L_{CIoU}&=1-IoU+\frac{c^2}{d^2}+v\cdot\lambda\cdot\frac{d^2}{(c^2+\epsilon)}\\\end{matrix}$$
+$$\begin{matrix}IoU&=\frac{P_b\cap Y_b}{P_b+Y_b-P_b\cap Y_b}\\L_{CIoU}&=1-IoU+\frac{c^2}{d^2}+v\cdot\lambda\cdot\frac{d^2}{(c^2+\epsilon)}\end{matrix}$$
 
 BCE（二元交叉熵）用于计算分类损失：
 
@@ -165,12 +165,12 @@ $$L_{BCE}=-\left[Y_clog{(P_c})+\left(1-Y_c\right)log{(1-P_c)}\right]$$
 
 分布式焦点损失（DFL）是一种新颖的定位损失函数，用于构建无锚点检测头，解决正负样本中的类别不平衡问题，同时提高模型准确率。
 
-$$\begin{matrix}L(w_L,P_i,Y_i)=\sum_{k=1}^{w_L}CE(P_{i,k},Y_{i,k})\\R(w_R,P_i,Y_i)=\sum_{k=1}^{w_R}CE(P_{i,k},Y_{i,k})\\L_{DFL}=\frac{1}{N}\sum_{i=1}^{N}(\gamma L(w_L,P_i,Y_i)+\delta R(w_R,P_i,Y_i))\\\end{matrix}$$
+$$\begin{matrix}L(w_L,P_i,Y_i)=\sum_{k=1}^{w_L}CE(P_{i,k},Y_{i,k})\\R(w_R,P_i,Y_i)=\sum_{k=1}^{w_R}CE(P_{i,k},Y_{i,k})\\L_{DFL}=\frac{1}{N}\sum_{i=1}^{N}(\gamma L(w_L,P_i,Y_i)+\delta R(w_R,P_i,Y_i))\end{matrix}$$
 
 其模型架构与原始Yolov8对比如下：
 
-![alt text](image.png)
-![alt text](image-1.png)
+![完善后模型架构](md_img/15.png)
+![YOLOv8架构](md_img/16.png)
 
 #### 三、实验器材
 与实验一相同。
