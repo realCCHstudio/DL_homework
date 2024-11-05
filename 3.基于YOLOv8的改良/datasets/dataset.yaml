@@ -1,0 +1,4 @@
+train: ./train/images  # 指向训练图像
+val: ./val/images      # 指向验证图像
+nc: 15
+names: ['plane', 'large-vehicle', 'small-vehicle', 'ship', 'harbor', 'ground-track-field', 'soccer-ball-field', 'tennis-court', 'baseball-diamond', 'swimming-pool', 'roundabout', 'basketball-court', 'storage-tank', 'bridge', 'helicopter']

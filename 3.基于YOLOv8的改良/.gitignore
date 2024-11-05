@@ -140,7 +140,6 @@ dmypy.json
 .pyre/
 
 # datasets and projects (ignore /datasets dir at root only to allow for docs/en/datasets dir)
-/datasets
 runs/
 wandb/
 .DS_Store
